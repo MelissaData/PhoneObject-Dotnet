@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelissaDataPhoneObjectWindowsNetExample", "MelissaDataPhoneObjectWindowsNetExample.csproj", "{F76BDED7-0EBD-4AFB-B184-7C01E103207D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F76BDED7-0EBD-4AFB-B184-7C01E103207D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76BDED7-0EBD-4AFB-B184-7C01E103207D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76BDED7-0EBD-4AFB-B184-7C01E103207D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76BDED7-0EBD-4AFB-B184-7C01E103207D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D5612A8-4B39-45A6-A25E-E0687F09C337}
+	EndGlobalSection
+EndGlobal
