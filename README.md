@@ -24,7 +24,7 @@ And return
 
 - Windows 64-bit .NET Core 3.1 and .NET 5.0
 - Powershell 5.1
-- Melissa data files for 2022-09
+- Melissa data files for 2022-11
 
 ## Required File(s) and Programs
 
