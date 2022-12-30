@@ -50,7 +50,7 @@ namespace MelissaDataPhoneObjectWindowsNETSample
 
     static void RunAsConsole(string license, string testPhone, string dataPath)
     {
-      Console.WriteLine("\n\n===== WELCOME TO MELISSA DATA PHONE OBJECT WINDOWS NET SAMPLE =====\n");
+      Console.WriteLine("\n\n====== WELCOME TO MELISSA DATA PHONE OBJECT WINDOWS NET SAMPLE =====\n");
 
       PhoneObject phoneObject = new PhoneObject(license, dataPath);
 
