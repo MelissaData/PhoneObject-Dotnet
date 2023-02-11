@@ -1,6 +1,5 @@
-# Name:    MelissaDataPhoneObjectWindowsNET
-# Purpose: Use the Melissa Updater to make the MelissaDataPhoneObjectWindowsNET sample usable
-
+# Name:    MelissaPhoneObjectWindowsDotnet
+# Purpose: Use the Melissa Updater to make the MelissaPhoneObjectWindowsDotnet code usable
 
 ######################### Parameters ##########################
 
@@ -26,7 +25,7 @@ $ProductName = "DQ_PHONE_DATA"
 # Modify this if you want to use 
 $CurrentPath = $PSScriptRoot
 Set-Location $CurrentPath
-$ProjectPath = "$CurrentPath\MelissaDataPhoneObjectWindowsNETSample"
+$ProjectPath = "$CurrentPath\MelissaPhoneObjectWindowsDotnet"
 $DataPath = "$ProjectPath\Data"
 $BuildPath = "$ProjectPath\Build"
 
@@ -112,7 +111,7 @@ function CheckDLLs() {
 
 ########################## Main ############################
 
-Write-Host "`n=============== Sample of Melissa Data Phone Object ===============`n                    [ .NET | Windows | 64BIT ]`n"
+Write-Host "`n======================= Melissa Phone Object =======================`n                    [ .NET | Windows | 64BIT ]`n"
 
 # Get license (either from parameters or user input)
 if ([string]::IsNullOrEmpty($license) ) {
@@ -149,21 +148,21 @@ if (!$DLLsAreDownloaded) {
 
 Write-Host "All file(s) have been downloaded/updated! "
 
-# Start Sample
+# Start Program
 # Build project
 Write-Host "`n=========================== BUILD PROJECT =========================="
 
 # Target frameworks net7.0, net6.0, net5.0, netcoreapp3.1
 # Please comment out the version that you don't want to use and uncomment the one that you do want to use
-dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaDataPhoneObjectWindowsNETSample\MelissaDataPhoneObjectWindowsNETSample.csproj
-#dotnet publish -f="net6.0" -c Release -o $BuildPath MelissaDataPhoneObjectWindowsNETSample\MelissaDataPhoneObjectWindowsNETSample.csproj
-#dotnet publish -f="net5.0" -c Release -o $BuildPath MelissaDataPhoneObjectWindowsNETSample\MelissaDataPhoneObjectWindowsNETSample.csproj
-#dotnet publish -f="netcoreapp3.1" -c Release -o $BuildPath MelissaDataPhoneObjectWindowsNETSample\MelissaDataPhoneObjectWindowsNETSample.csproj
+dotnet publish -f="net7.0" -c Release -o $BuildPath MelissaPhoneObjectWindowsDotnet\MelissaPhoneObjectWindowsDotnet.csproj
+#dotnet publish -f="net6.0" -c Release -o $BuildPath MelissaPhoneObjectWindowsDotnet\MelissaPhoneObjectWindowsDotnet.csproj
+#dotnet publish -f="net5.0" -c Release -o $BuildPath MelissaPhoneObjectWindowsDotnet\MelissaPhoneObjectWindowsDotnet.csproj
+#dotnet publish -f="netcoreapp3.1" -c Release -o $BuildPath MelissaPhoneObjectWindowsDotnet\MelissaPhoneObjectWindowsDotnet.csproj
 
 # Run project
 if ([string]::IsNullOrEmpty($phone)) {
-  dotnet $BuildPath\MelissaDataPhoneObjectWindowsNETSample.dll --license $License  --dataPath $DataPath
+  dotnet $BuildPath\MelissaPhoneObjectWindowsDotnet.dll --license $License  --dataPath $DataPath
 }
 else {
-  dotnet $BuildPath\MelissaDataPhoneObjectWindowsNETSample.dll --license $License  --dataPath $DataPath --phone $phone
+  dotnet $BuildPath\MelissaPhoneObjectWindowsDotnet.dll --license $License  --dataPath $DataPath --phone $phone
 }

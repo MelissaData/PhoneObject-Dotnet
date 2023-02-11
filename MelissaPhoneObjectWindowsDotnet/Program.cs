@@ -5,7 +5,7 @@ using System.IO;
 using System.Reflection;
 using MelissaData;
 
-namespace MelissaDataPhoneObjectWindowsNETSample
+namespace MelissaPhoneObjectWindowsDotnet
 {
   class Program
   {
@@ -50,7 +50,7 @@ namespace MelissaDataPhoneObjectWindowsNETSample
 
     static void RunAsConsole(string license, string testPhone, string dataPath)
     {
-      Console.WriteLine("\n\n====== WELCOME TO MELISSA DATA PHONE OBJECT WINDOWS NET SAMPLE =====\n");
+      Console.WriteLine("\n\n========== WELCOME TO MELISSA PHONE OBJECT WINDOWS DOTNET ==========\n");
 
       PhoneObject phoneObject = new PhoneObject(license, dataPath);
 
@@ -144,16 +144,16 @@ namespace MelissaDataPhoneObjectWindowsNETSample
           }
         }
       }
-      Console.WriteLine("\n============ THANK YOU FOR USING MELISSA DATA NET OBJECT ===========\n");
+      Console.WriteLine("\n============ THANK YOU FOR USING MELISSA DOTNET OBJECT ===========\n");
     }
   }
 
   class PhoneObject
   {
-    // Path to phone object data files (.dat, etc)
+    // Path to Phone Object data files (.dat, etc)
     string dataFilePath; 
 
-    // Create instance of Melissa Data Phone Object
+    // Create instance of Melissa Phone Object
     public mdPhone mdPhoneObj = new mdPhone();
 
     public PhoneObject(string license, string dataPath)
@@ -176,13 +176,13 @@ namespace MelissaDataPhoneObjectWindowsNETSample
       Console.WriteLine($"              Expiration Date: {mdPhoneObj.GetLicenseExpirationDate()}");
 
       /**
-       * This number should match with the file properties of the Melissa Data Object binary file.
+       * This number should match with the file properties of the Melissa Object binary file.
        * If TEST appears with the build number, there may be a license key issue.
        */
       Console.WriteLine($"               Object Version: {mdPhoneObj.GetBuildNumber()}\n");
     }
 
-    //This will call the lookup function to process the input phone as well as generate the result codes
+    // This will call the lookup function to process the input phone as well as generate the result codes
     public void ExecuteObjectAndResultCodes(ref DataContainer data)
     {
       mdPhoneObj.Lookup(data.Phone, data.ZipCode);
@@ -193,8 +193,8 @@ namespace MelissaDataPhoneObjectWindowsNETSample
 
       data.ResultCodes = mdPhoneObj.GetResults();
 
-      // ResultsCodes explain any issues phone object has with the object.
-      // List of result codes for Phone object
+      // ResultsCodes explain any issues Phone Object has with the object.
+      // List of result codes for Phone Object
       // https://wiki.melissadata.com/?title=Result_Code_Details#Phone_Object
     }
   }
