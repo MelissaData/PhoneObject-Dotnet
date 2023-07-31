@@ -81,7 +81,7 @@ namespace MelissaPhoneObjectWindowsDotnet
 
         // Print user input
         Console.WriteLine("\n============================== INPUTS ==============================\n");
-        Console.WriteLine($"\t               Phone: {dataContainer.Phone}");
+        Console.WriteLine($"\t                Phone: {dataContainer.Phone}");
 
         // Execute Phone Object
         phoneObject.ExecuteObjectAndResultCodes(ref dataContainer);
